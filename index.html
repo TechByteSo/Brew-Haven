@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Haven — Идеальный кофе для твоего утра</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">Brew Haven</a>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="#hero" class="header__link">Главная</a></li>
+          <li><a href="#menu" class="header__link">Меню</a></li>
+          <li><a href="#about" class="header__link">О нас</a></li>
+          <li><a href="#contacts" class="header__link">Контакты</a></li>
+        </ul>
+        <a href="#booking" class="header__btn">Забронировать стол</a>
+      </nav>
+
+      <button type="button" class="header__burger" aria-label="Открыть меню" id="burgerBtn">
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+    </div>
+
+    <div class="header__overlay" id="menuOverlay" aria-hidden="true"></div>
+    <div class="header__menu" id="mobileMenu">
+      <ul class="header__menu-list">
+        <li><a href="#hero" class="header__menu-link">Главная</a></li>
+        <li><a href="#menu" class="header__menu-link">Меню</a></li>
+        <li><a href="#about" class="header__menu-link">О нас</a></li>
+        <li><a href="#contacts" class="header__menu-link">Контакты</a></li>
+      </ul>
+      <a href="#booking" class="header__btn header__menu-btn">Забронировать стол</a>
+    </div>
+  </header>
+
+  <!-- ========== Hero ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__content reveal">
+      <h1 class="hero__title">Идеальный кофе для твоего утра</h1>
+      <p class="hero__subtitle">Свежие зёрна, уютная атмосфера и авторские десерты</p>
+      <div class="hero__buttons">
+        <a href="#menu" class="hero__btn hero__btn--primary">Смотреть меню</a>
+        <a href="#contacts" class="hero__btn hero__btn--outline">Заказать навынос</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Menu ========== -->
+  <section class="section menu" id="menu">
+    <h2 class="section__title reveal">Что попробовать?</h2>
+    <div class="menu__grid">
+      <article class="menu__card reveal">
+        <div class="menu__icon"><i class="fas fa-coffee"></i></div>
+        <h3 class="menu__name">Капучино</h3>
+        <p class="menu__price">180 ₽</p>
+        <p class="menu__desc">Нежный эспрессо с молочной пенкой и щепоткой корицы.</p>
+      </article>
+      <article class="menu__card reveal">
+        <div class="menu__icon"><i class="fas fa-bread-slice"></i></div>
+        <h3 class="menu__name">Круассан</h3>
+        <p class="menu__price">150 ₽</p>
+        <p class="menu__desc">Свежая выпечка из слоёного теста, идеально к кофе.</p>
+      </article>
+      <article class="menu__card reveal">
+        <div class="menu__icon"><i class="fas fa-cookie-bite"></i></div>
+        <h3 class="menu__name">Чизкейк</h3>
+        <p class="menu__price">220 ₽</p>
+        <p class="menu__desc">Классический нью-йоркский чизкейк с ягодным топпингом.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== About ========== -->
+  <section class="section about" id="about">
+    <div class="about__inner">
+      <div class="about__content">
+        <h2 class="about__title reveal">Немного о нас</h2>
+        <p class="about__text reveal">
+          Brew Haven — это место, где каждое утро начинается с чашки идеального кофе. Мы обжариваем зёрна сами, готовим десерты по авторским рецептам и создаём атмосферу, в которой хочется оставаться снова и снова. Приходите за вкусом и уютом.
+        </p>
+        <div class="about__stats">
+          <div class="about__stat reveal">
+            <div class="about__stat-icon"><i class="fas fa-coffee"></i></div>
+            <div class="about__stat-value">10+</div>
+            <div class="about__stat-label">сортов кофе</div>
+          </div>
+          <div class="about__stat reveal">
+            <div class="about__stat-icon"><i class="fas fa-award"></i></div>
+            <div class="about__stat-value">5 лет</div>
+            <div class="about__stat-label">опыта</div>
+          </div>
+          <div class="about__stat reveal">
+            <div class="about__stat-icon"><i class="fas fa-heart"></i></div>
+            <div class="about__stat-value">1000+</div>
+            <div class="about__stat-label">довольных клиентов</div>
+          </div>
+        </div>
+      </div>
+      <img class="about__image reveal" src="images/coffee__about_us.jpg" alt="Интерьер кофейни Brew Haven">
+    </div>
+  </section>
+
+  <!-- ========== Reviews ========== -->
+  <section class="reviews" id="reviews">
+    <h2 class="reviews__title reveal">Что говорят гости</h2>
+    <div class="reviews__slider">
+      <button type="button" class="reviews__arrow reviews__arrow--prev" aria-label="Предыдущая страница">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="reviews__slider-wrapper">
+        <div class="reviews__track" id="reviewsTrack">
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">А</div>
+              <div class="reviews__name">Анна</div>
+              <p class="reviews__text">Лучший капучино в городе! Уютно, вкусно и всегда приветливый персонал. Буду приходить снова.</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">М</div>
+              <div class="reviews__name">Михаил</div>
+              <p class="reviews__text">Отличное место для работы и встреч. Wi-Fi быстрый, кофе — на высоте. Рекомендую чизкейк.</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">Е</div>
+              <div class="reviews__name">Елена</div>
+              <p class="reviews__text">Заказывала навынос — всё упаковали аккуратно, кофе не остыл. Спасибо Brew Haven!</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">Б</div>
+              <div class="reviews__name">Борис</div>
+              <p class="reviews__text">По выходным заходим с семьёй — детям нравятся горячий шоколад и круассаны. Рекомендую!</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">М</div>
+              <div class="reviews__name">Мария</div>
+              <p class="reviews__text">Идеальное место для встречи с подругами. Уютно, вкусный кофе и десерты. Обязательно вернусь.</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">Д</div>
+              <div class="reviews__name">Дмитрий</div>
+              <p class="reviews__text">Работаю удалённо — здесь тихо, есть розетки и быстрый Wi-Fi. Лате каждый день, как ритуал.</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">О</div>
+              <div class="reviews__name">Ольга</div>
+              <p class="reviews__text">Первый раз попробовала раф — теперь заказываю только здесь. Персонал знает вкус каждого гостя.</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">И</div>
+              <div class="reviews__name">Игорь</div>
+              <p class="reviews__text">Бронировал столик на день рождения — всё организовали отлично. Спасибо команде Brew Haven!</p>
+            </div>
+          </div>
+          <div class="reviews__slide">
+            <div class="reviews__card">
+              <div class="reviews__avatar">К</div>
+              <div class="reviews__name">Ксения</div>
+              <p class="reviews__text">Люблю начинать утро с капучино и круассана. Качество стабильное, атмосфера тёплая.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="reviews__arrow reviews__arrow--next" aria-label="Следующая страница">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="reviews__dots" id="reviewsDots"></div>
+  </section>
+
+  <!-- ========== Booking form ========== -->
+  <section class="booking" id="booking">
+    <h2 class="booking__title reveal">Забронировать столик</h2>
+    <form class="booking__form reveal" id="bookingForm" novalidate>
+      <div class="booking__row">
+        <label class="booking__label" for="bookingName">Имя</label>
+        <input type="text" class="booking__input" id="bookingName" name="name" placeholder="Ваше имя" required>
+      </div>
+      <div class="booking__row">
+        <label class="booking__label" for="bookingPhone">Телефон</label>
+        <input type="tel" class="booking__input" id="bookingPhone" name="phone" placeholder="+7 (999) 123-45-67" required>
+      </div>
+      <div class="booking__row booking__row--half">
+        <div>
+          <label class="booking__label" for="bookingDate">Дата</label>
+          <input type="date" class="booking__input" id="bookingDate" name="date" required>
+        </div>
+        <div>
+          <label class="booking__label" for="bookingTime">Время</label>
+          <input type="time" class="booking__input" id="bookingTime" name="time" required>
+        </div>
+      </div>
+      <div class="booking__row">
+        <label class="booking__label" for="bookingGuests">Количество гостей</label>
+        <select class="booking__select" id="bookingGuests" name="guests" required>
+          <option value="">Выберите</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6+</option>
+        </select>
+      </div>
+      <button type="submit" class="booking__submit">Отправить бронь</button>
+    </form>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer" id="contacts">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__block">
+          <h3 class="footer__block-title">Контакты</h3>
+          <a href="tel:+78001234567" class="footer__contact"><i class="fas fa-phone"></i> +7 (800) 123-45-67</a>
+          <a href="mailto:hello@brewhaven.ru" class="footer__contact"><i class="fas fa-envelope"></i> hello@brewhaven.ru</a>
+          <p class="footer__contact"><i class="fas fa-map-marker-alt"></i> ул. Кофейная, 15</p>
+        </div>
+        <div class="footer__block">
+          <h3 class="footer__block-title">Мы в соцсетях</h3>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__block">
+          <h3 class="footer__block-title">Карта</h3>
+          <div class="footer__map">Карта</div>
+        </div>
+      </div>
+      <p class="footer__copy">© Brew Haven, 2025. Идеальный кофе для твоего утра.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
